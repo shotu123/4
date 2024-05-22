@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table, th, td {
+      border: 2px solid black;
+      border-collapse: collapse;
+      font-size: 1.5rem;
+    }
+    table {
+      width: 375px;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+    }
+    button {
+      margin: 50px auto;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th></th>
+      <th>bundle</th>
+      <th>ok weight</th>
+      <th>sale weight</th>
+      <th>Reading</th>
+    </tr>
+    <tr>
+      <th>8 MM</th>
+      <td><input class="bundle"></td>
+      <td><input class="ok-weight"></td>
+      <td><input class="sale-weight"></td>
+      <td class="result"></td>
+    </tr>
+    <tr>
+      <th>10 MM</th>
+      <td><input class="bundle"></td>
+      <td><input class="ok-weight"></td>
+      <td><input class="sale-weight"></td>
+      <td class="result"></td>
+    </tr>
+    <tr>
+      <th>12 MM</th>
+      <td><input class="bundle"></td>
+      <td><input class="ok-weight"></td>
+      <td><input class="sale-weight"></td>
+      <td class="result"></td>
+    </tr>
+    <tr>
+      <th>16 MM</th>
+      <td><input class="bundle"></td>
+      <td><input class="ok-weight"></td>
+      <td><input class="sale-weight"></td>
+      <td class="result"></td>
+    </tr>
+    <tr>
+      <th>20 MM</th>
+      <td><input class="bundle"></td>
+      <td><input class="ok-weight"></td>
+      <td><input class="sale-weight"></td>
+      <td class="result"></td>
+    </tr>
+    <tr>
+      <th>25 MM</th>
+      <td><input class="bundle"></td>
+      <td><input class="ok-weight"></td>
+      <td><input class="sale-weight"></td>
+      <td class="result"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="result-total"></td>
+    </tr>
+  </table>
+  <button>Calculate</button>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", calResult);
+
+      function calResult() {
+        const rows = document.querySelectorAll("table tr");
+        let total = 0;
+
+        rows.forEach((row, index) => {
+          if (index === 0 || index === rows.length - 1) return; // Skip header and total row
+          
+          const bundle = row.querySelector(".bundle").value;
+          const okWeight = row.querySelector(".ok-weight").value;
+          const saleWeight = row.querySelector(".sale-weight").value;
+          const result = row.querySelector(".result");
+
+          if (bundle && okWeight && saleWeight) {
+            const rowResult =(bundle * saleWeight) - (bundle * okWeight) ;
+            result.textContent = rowResult;
+            total += rowResult;
+          }
+        });
+
+        document.querySelector(".result-total").textContent = total;
+      }
+    });
+  </script>
+</body>
+</html>
