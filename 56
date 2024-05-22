@@ -34,42 +34,42 @@
       <th>Reading</th>
     </tr>
     <tr>
-      <th>8 MM</th>
+      <th>8</th>
       <td><input class="bundle"></td>
       <td><input class="ok-weight"></td>
       <td><input class="sale-weight"></td>
       <td class="result"></td>
     </tr>
     <tr>
-      <th>10 MM</th>
+      <th>10</th>
       <td><input class="bundle"></td>
       <td><input class="ok-weight"></td>
       <td><input class="sale-weight"></td>
       <td class="result"></td>
     </tr>
     <tr>
-      <th>12 MM</th>
+      <th>12</th>
       <td><input class="bundle"></td>
       <td><input class="ok-weight"></td>
       <td><input class="sale-weight"></td>
       <td class="result"></td>
     </tr>
     <tr>
-      <th>16 MM</th>
+      <th>16</th>
       <td><input class="bundle"></td>
       <td><input class="ok-weight"></td>
       <td><input class="sale-weight"></td>
       <td class="result"></td>
     </tr>
     <tr>
-      <th>20 MM</th>
+      <th>20</th>
       <td><input class="bundle"></td>
       <td><input class="ok-weight"></td>
       <td><input class="sale-weight"></td>
       <td class="result"></td>
     </tr>
     <tr>
-      <th>25 MM</th>
+      <th>25</th>
       <td><input class="bundle"></td>
       <td><input class="ok-weight"></td>
       <td><input class="sale-weight"></td>
